@@ -146,6 +146,7 @@ public class ArvoreBin {
     }
 
     public static void main(String[] args) {
+
         ArvoreBin arvore = new ArvoreBin();
 
         arvore.inserir(10);
@@ -154,16 +155,56 @@ public class ArvoreBin {
         arvore.inserir(3);
         arvore.inserir(7);
 
-        System.out.println("Caminhamento pré-ordem:");
-        arvore.preOrdem();
-
-        System.out.println("\nCaminhamento em ordem:");
-        arvore.central();
-
-        System.out.println("\nCaminhamento pós-ordem:");
-        arvore.posOrdem();
+        // remoção de um nodo folha
+        arvore.remover(7);
 
         arvore.gerarArqDot("arvoreBin.dot");
+
+        ArvoreBin arvore2 = new ArvoreBin();
+
+        arvore2.inserir(5);
+        arvore2.inserir(3);
+        arvore2.inserir(8);
+        arvore2.inserir(2);
+        arvore2.inserir(4);
+
+        // remoção de um nodo pai
+        arvore2.remover(8);
+
+        arvore2.gerarArqDot("arvoreBin2.dot");
+
+        ArvoreBin arvore3 = new ArvoreBin();
+
+        arvore3.inserir(3);
+        arvore3.inserir(6);
+        arvore3.inserir(9);
+        arvore3.inserir(12);
+        arvore3.inserir(15);
+
+        // buscar um valor na árvore
+        arvore3.buscar(6);
+
+        arvore3.gerarArqDot("arvoreBin3.dot");
+
+        ArvoreBin arvore4 = new ArvoreBin();
+
+        arvore4.inserir(10);
+        arvore4.inserir(20);
+        arvore4.inserir(19);
+        arvore4.inserir(11);
+        arvore4.inserir(13);
+
+        // caminhamentos
+        System.out.println("Caminhamento pré-ordem:");
+        arvore4.preOrdem();
+
+        System.out.println("\nCaminhamento em ordem:");
+        arvore4.central();
+
+        System.out.println("\nCaminhamento pós-ordem:");
+        arvore4.posOrdem();
+
+        arvore4.gerarArqDot("arvoreBin4.dot");
     }
 }
 
