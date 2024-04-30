@@ -1,2 +1,2 @@
 Integrantes:
-Maria Eduarda Borgea, Gustavo Mezomo e Vinícius Bergmann.
+Maria Eduarda Borges, Gustavo Mezomo e Vinícius Bergmann.
